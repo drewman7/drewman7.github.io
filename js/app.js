@@ -76,6 +76,7 @@ function listUpcomingEvents() {
     if (events.length > 0) {
       for (i = 0; i < events.length; i++) {
         var event = events[i];
+        console.log(events[i]);
         var when = event.start.dateTime;
         if (!when) {
           when = event.start.date;
