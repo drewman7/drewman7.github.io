@@ -44,6 +44,7 @@ var viewModel = function() {
      */
     function handleAuthResult(authResult) {
       var authorizeDiv = document.getElementById('authorize-div');
+      console.log(authResult);
       if (authResult && !authResult.error) {
         // Hide auth UI, then load client library.
         authorizeDiv.style.display = 'none';
