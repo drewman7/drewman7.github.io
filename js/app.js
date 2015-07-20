@@ -24,11 +24,12 @@ var viewModel = function() {
     var CLIENT_ID = '843769279902-c5r8m7millp03vnvnfufnoinooat96lv.apps.googleusercontent.com';
 
     var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
-    console.log('in function');
+
     /**
      * Check if current user has authorized this application.
      */
     function checkAuth() {
+      console.log('in function');
       gapi.auth.authorize(
         {
           'client_id': CLIENT_ID,
