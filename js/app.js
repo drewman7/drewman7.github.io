@@ -29,7 +29,7 @@ var viewModel = function() {
      * Check if current user has authorized this application.
      */
 
-    checkAuth();
+    //checkAuth();
 
     function checkAuth() {
       console.log('in function');
