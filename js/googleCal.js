@@ -1,7 +1,7 @@
 
       // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
-      var CLIENT_ID = '324547113679-tmu81g1a0ubt482hfm8tga5lnjgcmb3m.apps.googleusercontent.com';
+      var CLIENT_ID = '843769279902-c5r8m7millp03vnvnfufnoinooat96lv.apps.googleusercontent.com';
 
       var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
