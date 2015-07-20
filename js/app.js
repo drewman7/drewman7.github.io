@@ -28,6 +28,9 @@ var viewModel = function() {
     /**
      * Check if current user has authorized this application.
      */
+
+    checkAuth();
+
     function checkAuth() {
       console.log('in function');
       gapi.auth.authorize(
