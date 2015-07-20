@@ -14,7 +14,7 @@ var viewModel = function() {
   // The following are the initialization of oberservables for the knockoutjs methodology
   self.pageTitle = ko.observable(modelData.title);  // observable for the title in the header
 
-
+  console.log(SCOPES);
 };
 
 // This function call initiates the knockoutjs viewModel function and binds it to the web page
