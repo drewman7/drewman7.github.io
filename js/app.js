@@ -20,7 +20,6 @@ var viewModel = function() {
   // Google calandar API Javascript Coe
   // Your Client ID can be retrieved from your project in the Google
   // Developer Console, https://console.developers.google.com
-  var self2 = this;
 
   var CLIENT_ID = '843769279902-c5r8m7millp03vnvnfufnoinooat96lv.apps.googleusercontent.com';
 
@@ -32,14 +31,14 @@ var viewModel = function() {
 
   //checkAuth();
 
-  function checkAuth() {
+  self.checkAuth = function() {
     console.log('in function');
     gapi.auth.authorize(
       {
         'client_id': CLIENT_ID,
         'scope': SCOPES,
         'immediate': true
-      }, handleAuthResult);
+      }, self.handleAuthResult);
   }
 
   /**
@@ -47,13 +46,13 @@ var viewModel = function() {
    *
    * @param {Object} authResult Authorization result.
    */
-  function handleAuthResult(authResult) {
+  self.handleAuthResult = function(authResult) {
     var authorizeDiv = document.getElementById('authorize-div');
     console.log(authResult);
     if (authResult && !authResult.error) {
       // Hide auth UI, then load client library.
       authorizeDiv.style.display = 'none';
-      loadCalendarApi();
+      self.loadCalendarApi();
     } else {
       // Show auth UI, allowing the user to initiate authorization by
       // clicking authorize button.
@@ -66,10 +65,10 @@ var viewModel = function() {
    *
    * @param {Event} event Button click event.
    */
-  function handleAuthClick(event) {
+  self.handleAuthClick = function(event) {
     gapi.auth.authorize(
       {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
-      handleAuthResult);
+      self.handleAuthResult);
     return false;
   }
 
@@ -77,8 +76,8 @@ var viewModel = function() {
    * Load Google Calendar client library. List upcoming events
    * once client library is loaded.
    */
-  function loadCalendarApi() {
-    gapi.client.load('calendar', 'v3', listUpcomingEvents);
+  self.loadCalendarApi = function() {
+    gapi.client.load('calendar', 'v3', self.listUpcomingEvents);
   }
 
   /**
@@ -86,7 +85,7 @@ var viewModel = function() {
    * the authorized user's calendar. If no events are found an
    * appropriate message is printed.
    */
-  function listUpcomingEvents() {
+  self.listUpcomingEvents = function() {
     var request = gapi.client.calendar.events.list({
       'calendarId': 'primary',
       'timeMin': (new Date()).toISOString(),
@@ -98,7 +97,7 @@ var viewModel = function() {
 
     request.execute(function(resp) {
       var events = resp.items;
-      appendPre('Upcoming events:');
+      self.appendPre('Upcoming events:');
 
       if (events.length > 0) {
         for (i = 0; i < events.length; i++) {
@@ -108,10 +107,10 @@ var viewModel = function() {
           if (!when) {
             when = event.start.date;
           }
-          appendPre(event.summary + ' (' + when + ')')
+          self.appendPre(event.summary + ' (' + when + ')')
         }
       } else {
-        appendPre('No upcoming events found.');
+        self.appendPre('No upcoming events found.');
       }
 
     });
@@ -123,7 +122,7 @@ var viewModel = function() {
    *
    * @param {string} message Text to be placed in pre element.
    */
-  function appendPre(message) {
+  self.appendPre = function(message) {
     var pre = document.getElementById('output');
     var textContent = document.createTextNode(message + '\n');
     pre.appendChild(textContent);
