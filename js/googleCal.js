@@ -74,7 +74,9 @@
 
         request.execute(function(resp) {
           var events = resp.items;
+          console.log(events);
           eventList = events;
+          console.log(eventList);
           appendPre('Upcoming events:');
 
           if (events.length > 0) {
