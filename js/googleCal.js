@@ -94,7 +94,7 @@
 
         });
 
-        self.changeLook();
+        self.changeLook;
       }
 
       /**
