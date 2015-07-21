@@ -5,7 +5,7 @@
 
       var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
-      var events[];
+      var events = [];
 
       /**
        * Check if current user has authorized this application.
