@@ -5,8 +5,8 @@
 
       var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
+      var events[];
 
-      console.log("loaded");
       /**
        * Check if current user has authorized this application.
        */
@@ -73,7 +73,7 @@
         });
 
         request.execute(function(resp) {
-          var events = resp.items;
+          events = resp.items;
           appendPre('Upcoming events:');
 
           if (events.length > 0) {
