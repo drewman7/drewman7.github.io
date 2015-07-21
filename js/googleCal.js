@@ -93,6 +93,8 @@
           }
 
         });
+
+        self.changeLook();
       }
 
       /**
