@@ -94,7 +94,7 @@
 
         });
 
-        viewModel.changeLook;
+        $root.changeLook;
       }
 
       /**
