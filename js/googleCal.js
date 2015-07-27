@@ -92,9 +92,11 @@
             appendPre('No upcoming events found.');
           }
 
+          viewModel.changeLook;
+
         });
 
-        //$root.changeLook;
+
       }
 
       /**
