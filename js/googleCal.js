@@ -94,7 +94,7 @@
 
         });
 
-        $root.changeLook;
+        //$root.changeLook;
       }
 
       /**
