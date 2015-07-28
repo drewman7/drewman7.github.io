@@ -3,14 +3,17 @@
 // modelData contains the global base variables for the web application
 var modelData = {
   title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
+  eventList: {}
 };
 
-var octopus = function(){
+var octopus =  {
   'use strict';
   var self = this;
 
-  self.init = function(){
+  init: function(){
     console.log(eventList);
+    console.log(modelData.eventList);
+    console.log(events);
     //checkAuth();
     //Calls the function to display the header section and bio information
     //view.bioDisplay();

@@ -92,8 +92,9 @@
             appendPre('No upcoming events found.');
           }
 
+          modelData.eventList = events;
           //viewModel.changeLook;
-          octopus.init();
+          octopus.init;
         });
 
 
