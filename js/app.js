@@ -33,8 +33,8 @@ $(function() {
 var octopus = {
 
   init: function(){
-
-    checkAuth();
+    console.log(eventList);
+    //checkAuth();
     //Calls the function to display the header section and bio information
     //view.bioDisplay();
     //calls the work experience function to display the work experience information
