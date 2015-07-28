@@ -8,8 +8,6 @@ var modelData = {
 
 var octopus =  {
 
-  var self = this;
-
   init: function(){
     console.log(eventList);
     console.log(modelData.eventList);
