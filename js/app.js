@@ -28,7 +28,7 @@ var octopus =  {
   }
 };
 
-var view = function() {
+var viewModel = function() {
   'use strict';
   var self = this;    // Sets up 'self' variable to be used for proper scope in functions
 
