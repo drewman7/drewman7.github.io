@@ -5,9 +5,29 @@ var modelData = {
   title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
 };
 
+var octopus = {
+  'use strict';
+  var self = this;
 
+  self.init = function(){
+    console.log(eventList);
+    //checkAuth();
+    //Calls the function to display the header section and bio information
+    //view.bioDisplay();
+    //calls the work experience function to display the work experience information
+    //view.workDisplay();
+    //calls the projects function to display the projects information
+    //view.projectsDisplay();
+    //calls the education function to display the education information
+    //view.educationDisplay();
+    //calls the certification function to display the certification information
+    //view.certificationsDisplay();
+    //calls the bio.display2 function to display the map and footer
+    //view.bioDisplay2();
+  }
+};
 
-var viewModel = function() {
+var view = function() {
   'use strict';
   var self = this;    // Sets up 'self' variable to be used for proper scope in functions
 
@@ -25,27 +45,8 @@ var viewModel = function() {
 };
 
 // This function call initiates the knockoutjs viewModel function and binds it to the web page
-$(function() {
-    ko.applyBindings(new viewModel());
-});
+//$(function() {
+//    ko.applyBindings(new viewModel());
+//});
 
 
-var octopus = {
-
-  init: function(){
-    console.log(eventList);
-    //checkAuth();
-    //Calls the function to display the header section and bio information
-    //view.bioDisplay();
-    //calls the work experience function to display the work experience information
-    //view.workDisplay();
-    //calls the projects function to display the projects information
-    //view.projectsDisplay();
-    //calls the education function to display the education information
-    //view.educationDisplay();
-    //calls the certification function to display the certification information
-    //view.certificationsDisplay();
-    //calls the bio.display2 function to display the map and footer
-    //view.bioDisplay2();
-  }
-};
