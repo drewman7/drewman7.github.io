@@ -7,7 +7,7 @@ var modelData = {
 };
 
 var octopus =  {
-  'use strict';
+
   var self = this;
 
   init: function(){
@@ -47,9 +47,9 @@ var view = function() {
 
 };
 
-// This function call initiates the knockoutjs viewModel function and binds it to the web page
-//$(function() {
-//    ko.applyBindings(new viewModel());
-//});
+ This function call initiates the knockoutjs viewModel function and binds it to the web page
+$(function() {
+    ko.applyBindings(new viewModel());
+});
 
 
