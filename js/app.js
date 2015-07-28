@@ -5,7 +5,7 @@ var modelData = {
   title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
 };
 
-var octopus = {
+var octopus = function(){
   'use strict';
   var self = this;
 
