@@ -14,7 +14,9 @@ var viewModel = function() {
   // The following are the initialization of oberservables for the knockoutjs methodology
   self.pageTitle = ko.observable(modelData.title);  // observable for the title in the header
 
-  console.log(eventList)
+  console.log(eventList);
+
+
 
   self.changeLook = function(){
     console.log(eventList);
@@ -26,3 +28,24 @@ var viewModel = function() {
 $(function() {
     ko.applyBindings(new viewModel());
 });
+
+
+var octopus = {
+
+  init: function(){
+
+    checkAuth();
+    //Calls the function to display the header section and bio information
+    //view.bioDisplay();
+    //calls the work experience function to display the work experience information
+    //view.workDisplay();
+    //calls the projects function to display the projects information
+    //view.projectsDisplay();
+    //calls the education function to display the education information
+    //view.educationDisplay();
+    //calls the certification function to display the certification information
+    //view.certificationsDisplay();
+    //calls the bio.display2 function to display the map and footer
+    //view.bioDisplay2();
+  }
+};
