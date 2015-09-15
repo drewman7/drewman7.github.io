@@ -11,7 +11,7 @@ var octopus =  {
   init: function(){
     console.log(eventList);
     console.log(modelData.eventList);
-    console.log(events);
+    //console.log(events);
     //checkAuth();
     //Calls the function to display the header section and bio information
     //view.bioDisplay();
