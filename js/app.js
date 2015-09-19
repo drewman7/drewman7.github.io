@@ -22,6 +22,7 @@ var octopus =  {
     console.log(modelData.title.getDay());
 	modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 	console.log(modelData.title);
+	
     //console.log(events);
     //checkAuth();
     //Calls the function to display the header section and bio information
@@ -44,7 +45,7 @@ var viewModel = function() {
   var self = this;    // Sets up 'self' variable to be used for proper scope in functions
 
   // The following are the initialization of oberservables for the knockoutjs methodology
-  self.pageTitle = ko.observable(modelData.title);  // observable for the title in the header
+  self.pageTitle = ko.observable(modelData.daysOfWeek[modelData.title.getDay()]);  // observable for the title in the header
 
   console.log(eventList);
 
