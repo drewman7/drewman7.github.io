@@ -13,7 +13,7 @@ var modelData = {
 		"Friday", 
 		"Saturday"
 		],
-	count: 60;
+	count: 60
 };
 
 var octopus =  {
