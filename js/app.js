@@ -12,7 +12,8 @@ var modelData = {
 		"Thursday", 
 		"Friday", 
 		"Saturday"
-		]
+		],
+	count: 60;
 };
 
 var octopus =  {
@@ -41,19 +42,29 @@ var octopus =  {
 };
 
 var viewModel = function() {
-  'use strict';
-  var self = this;    // Sets up 'self' variable to be used for proper scope in functions
+	'use strict';
+	var self = this;    // Sets up 'self' variable to be used for proper scope in functions
+	var counter = setInterval(self.timer, 1000); //1000 will  run it every 1 second
+	var testCount = 0;
+  
+	// The following are the initialization of oberservables for the knockoutjs methodology
+	self.pageTitle = ko.observable(modelData.daysOfWeek[modelData.title.getDay()]);  // observable for the title in the header
 
-  // The following are the initialization of oberservables for the knockoutjs methodology
-  self.pageTitle = ko.observable(modelData.daysOfWeek[modelData.title.getDay()]);  // observable for the title in the header
+	console.log(eventList);
 
-  console.log(eventList);
+	self.timer = function(){
+			modelData.count=modelData.count-1;
+			if (modelData.count <= 0)
+			{
+				clearInterval(counter);
+				self.pageTitle = "test" + testCount++;
+				return;
+			}
+	}
 
-
-
-  self.changeLook = function(){
-    console.log(eventList);
-  };
+	self.changeLook = function(){
+		console.log(eventList);
+	};
 
 };
 
