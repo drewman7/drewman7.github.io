@@ -20,7 +20,7 @@ var octopus =  {
 
   init: function(){
     var self2 = this;
-	var counter = setInterval(octopus.timer, 1000); //1000 will  run it every 1 second
+	var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 	var testCount = 0;
 	
 	console.log(eventList);
@@ -28,16 +28,6 @@ var octopus =  {
 	modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 	console.log(modelData.title);
 	
-	self2.timer = function(){
-			modelData.count=modelData.count-1;
-			console.log(modelData.count);
-			if (modelData.count <= 0){
-				clearInterval(counter);
-				self.pageTitle = "test" + testCount++;
-				return;
-			}
-	}
-
 	self.changeLook = function(){
 		console.log(eventList);
 	};
@@ -71,6 +61,16 @@ var viewModel = function() {
 
 
 
+};
+
+var timer = function() {
+	modelData.count=modelData.count-1;
+	console.log(modelData.count);
+	if (modelData.count <= 0){
+		clearInterval(counter);
+		self.pageTitle = "test" + testCount++;
+		return;
+	}
 };
 
 //This function call initiates the knockoutjs viewModel function and binds it to the web page
