@@ -3,8 +3,16 @@
 // modelData contains the global base variables for the web application
 var modelData = {
   //title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
-  title: new Date(),
-  eventList: {}
+	'title': new Date(),
+	'daysOfWeek': [
+		"Sunday", 
+		"Monday", 
+		"Tuesday", 
+		"Wednesday", 
+		"Thursday", 
+		"Friday", 
+		"Saturday"
+		]
 };
 
 var octopus =  {
@@ -12,6 +20,7 @@ var octopus =  {
   init: function(){
     console.log(eventList);
     console.log(modelData.title.getDay());
+	modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
     //console.log(events);
     //checkAuth();
     //Calls the function to display the header section and bio information
