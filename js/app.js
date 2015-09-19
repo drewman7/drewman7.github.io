@@ -13,7 +13,7 @@ var modelData = {
 		"Friday", 
 		"Saturday"
 		],
-	count: 60
+	count: 10
 };
 
 var octopus =  {
@@ -54,6 +54,7 @@ var viewModel = function() {
 
 	self.timer = function(){
 			modelData.count=modelData.count-1;
+			console.log(modelData.count);
 			if (modelData.count <= 0)
 			{
 				clearInterval(counter);
