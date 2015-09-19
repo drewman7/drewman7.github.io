@@ -3,7 +3,7 @@
 // modelData contains the global base variables for the web application
 var modelData = {
   //title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
-  title: new Date();
+  title: new Date(),
   eventList: {}
 };
 
