@@ -19,10 +19,28 @@ var modelData = {
 var octopus =  {
 
   init: function(){
-    console.log(eventList);
+    var self2 = this;
+	var counter = setInterval(self2.timer, 1000); //1000 will  run it every 1 second
+	var testCount = 0;
+	
+	console.log(eventList);
     console.log(modelData.title.getDay());
 	modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 	console.log(modelData.title);
+	
+	self2.timer = function(){
+			modelData.count=modelData.count-1;
+			console.log(modelData.count);
+			if (modelData.count <= 0){
+				clearInterval(counter);
+				self.pageTitle = "test" + testCount++;
+				return;
+			}
+	}
+
+	self.changeLook = function(){
+		console.log(eventList);
+	};
 	
     //console.log(events);
     //checkAuth();
@@ -44,28 +62,14 @@ var octopus =  {
 var viewModel = function() {
 	'use strict';
 	var self = this;    // Sets up 'self' variable to be used for proper scope in functions
-	var counter = setInterval(self.timer, 1000); //1000 will  run it every 1 second
-	var testCount = 0;
+
   
 	// The following are the initialization of oberservables for the knockoutjs methodology
 	self.pageTitle = ko.observable(modelData.daysOfWeek[modelData.title.getDay()]);  // observable for the title in the header
 
 	console.log(eventList);
 
-	self.timer = function(){
-			modelData.count=modelData.count-1;
-			console.log(modelData.count);
-			if (modelData.count <= 0)
-			{
-				clearInterval(counter);
-				self.pageTitle = "test" + testCount++;
-				return;
-			}
-	}
 
-	self.changeLook = function(){
-		console.log(eventList);
-	};
 
 };
 
