@@ -20,7 +20,7 @@ var octopus =  {
 
   init: function(){
     var self2 = this;
-	var counter = setInterval(self2.timer, 1000); //1000 will  run it every 1 second
+	var counter = setInterval(octopus.timer, 1000); //1000 will  run it every 1 second
 	var testCount = 0;
 	
 	console.log(eventList);
