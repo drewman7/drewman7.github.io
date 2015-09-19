@@ -17,36 +17,37 @@ var modelData = {
 };
 
 var octopus =  {
-
-  init: function(){
-    var self2 = this;
 	var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
-	var testCount = 0;
-	
-	console.log(eventList);
-    console.log(modelData.title.getDay());
-	modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
-	console.log(modelData.title);
-	
-	self.changeLook = function(){
+  
+	 init: function(){
+		var self2 = this;
+
+		var testCount = 0;
+		
 		console.log(eventList);
-	};
-	
-    //console.log(events);
-    //checkAuth();
-    //Calls the function to display the header section and bio information
-    //view.bioDisplay();
-    //calls the work experience function to display the work experience information
-    //view.workDisplay();
-    //calls the projects function to display the projects information
-    //view.projectsDisplay();
-    //calls the education function to display the education information
-    //view.educationDisplay();
-    //calls the certification function to display the certification information
-    //view.certificationsDisplay();
-    //calls the bio.display2 function to display the map and footer
-    //view.bioDisplay2();
-  }
+		console.log(modelData.title.getDay());
+		modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
+		console.log(modelData.title);
+		
+		self.changeLook = function(){
+			console.log(eventList);
+		};
+		
+		//console.log(events);
+		//checkAuth();
+		//Calls the function to display the header section and bio information
+		//view.bioDisplay();
+		//calls the work experience function to display the work experience information
+		//view.workDisplay();
+		//calls the projects function to display the projects information
+		//view.projectsDisplay();
+		//calls the education function to display the education information
+		//view.educationDisplay();
+		//calls the certification function to display the certification information
+		//view.certificationsDisplay();
+		//calls the bio.display2 function to display the map and footer
+		//view.bioDisplay2();
+	 }
 };
 
 var viewModel = function() {
@@ -67,8 +68,9 @@ var timer = function() {
 	modelData.count=modelData.count-1;
 	console.log(modelData.count);
 	if (modelData.count <= 0){
-		clearInterval(counter);
-		self.pageTitle = "test" + testCount++;
+		//clearInterval(counter);
+		viewModel.pageTitle = "test" + octopus.testCount++;
+		modelData.count = 10;
 		return;
 	}
 };
