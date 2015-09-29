@@ -57,9 +57,9 @@ var octopus = {
 	 calendarList: function(){
 		  appendPre('Upcoming events:');
 
-          if (events.length > 0) {
-            for (i = 0; i < events.length; i++) {
-              var event = events[i];
+          if (eventList.length > 0) {
+            for (i = 0; i < eventList.length; i++) {
+              var event = eventList[i];
               var when = event.start.dateTime;
               if (!when) {
                 when = event.start.date;
