@@ -71,7 +71,7 @@ var timer = function() {
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
-		modelData.pageTitle("test" + octopus.testCount++);
+		modelData.pageTitle("test" + octopus.init.testCount++);
 		modelData.count = 10;
 		return;
 	}
