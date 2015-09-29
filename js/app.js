@@ -19,7 +19,7 @@ var modelData = {
 };
 
 var octopus = {
-	 var selfOctopus = this;
+	 
 	 
 	 init: function(){
 		var self2 = this;
@@ -32,7 +32,7 @@ var octopus = {
 		modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 		console.log(modelData.title);
 		
-		selfOctopus.calendarList();
+		calendarList();
 		
 		self.changeLook = function(){
 			console.log(eventList);
