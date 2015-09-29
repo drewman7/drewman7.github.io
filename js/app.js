@@ -22,7 +22,7 @@ function octopus() {
 	console.log(eventList);
 	this.init();
 	 
-	 var init = function(){
+	 init: function(){
 		var self2 = this;
 		var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 		var testCount = 0;
@@ -50,7 +50,7 @@ function octopus() {
 		//view.certificationsDisplay();
 		//calls the bio.display2 function to display the map and footer
 		//view.bioDisplay2();
-	 }
+	 };
 };
 
 var viewModel = function() {
