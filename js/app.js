@@ -16,7 +16,7 @@ var modelData = {
 	count: 10
 };
 
-var octopus =  {
+var octopus = function() {
 	
   
 	 init: function(){
