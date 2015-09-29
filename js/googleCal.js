@@ -93,7 +93,7 @@
           }
 
           //viewModel.changeLook;
-          octopus.init();
+          octopus();
         });
 
 
