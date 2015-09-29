@@ -69,7 +69,8 @@ var timer = function() {
 	console.log(modelData.count);
 	if (modelData.count <= 0){
 		//clearInterval(counter);
-		viewModel.pageTitle = "test" + octopus.testCount++;
+		console.log(viewModel.pageTitle());
+		viewModel.pageTitle("test" + octopus.testCount++);
 		modelData.count = 10;
 		return;
 	}
