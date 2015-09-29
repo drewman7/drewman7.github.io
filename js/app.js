@@ -19,6 +19,7 @@ var modelData = {
 };
 
 var octopus = {
+	 var selfOctopus = this;
 	 
 	 init: function(){
 		var self2 = this;
@@ -30,6 +31,8 @@ var octopus = {
 		console.log(modelData.title.getDay());
 		modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 		console.log(modelData.title);
+		
+		selfOctopus.calendarList();
 		
 		self.changeLook = function(){
 			console.log(eventList);
@@ -49,6 +52,23 @@ var octopus = {
 		//view.certificationsDisplay();
 		//calls the bio.display2 function to display the map and footer
 		//view.bioDisplay2();
+	 }
+	 
+	 calendarList: function(){
+		  appendPre('Upcoming events:');
+
+          if (events.length > 0) {
+            for (i = 0; i < events.length; i++) {
+              var event = events[i];
+              var when = event.start.dateTime;
+              if (!when) {
+                when = event.start.date;
+              }
+              appendPre(event.summary + ' (' + when + ')')
+            }
+          } else {
+            appendPre('No upcoming events found.');
+          }
 	 }
 };
 

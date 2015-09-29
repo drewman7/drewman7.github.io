@@ -77,20 +77,20 @@
           console.log(events);
           eventList = events;
           console.log(eventList);
-          appendPre('Upcoming events:');
+          //appendPre('Upcoming events:');
 
-          if (events.length > 0) {
-            for (i = 0; i < events.length; i++) {
-              var event = events[i];
-              var when = event.start.dateTime;
-              if (!when) {
-                when = event.start.date;
-              }
-              appendPre(event.summary + ' (' + when + ')')
-            }
-          } else {
-            appendPre('No upcoming events found.');
-          }
+          //if (events.length > 0) {
+          //  for (i = 0; i < events.length; i++) {
+          //    var event = events[i];
+          //    var when = event.start.dateTime;
+          //    if (!when) {
+          //      when = event.start.date;
+          //    }
+          //    appendPre(event.summary + ' (' + when + ')')
+          //  }
+          //} else {
+          //  appendPre('No upcoming events found.');
+          //}
 
           //viewModel.changeLook;
           octopus.init();
