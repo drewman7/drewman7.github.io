@@ -16,18 +16,15 @@ var modelData = {
 	count: 10
 };
 
-function octopus() {
-	var selfOctopus = this;
-	console.log("octopus");
-	console.log(eventList);
-	this.init();
+var octopus = {
 	 
 	 init: function(){
 		var self2 = this;
 		var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 		var testCount = 0;
 		
-		
+		console.log("octopus");
+		console.log(eventList);
 		console.log(modelData.title.getDay());
 		modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 		console.log(modelData.title);
