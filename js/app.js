@@ -19,13 +19,14 @@ var modelData = {
 function octopus() {
 	 
 	console.log("octopus");
+	console.log(eventList);
 	 
 	 var init = function(){
 		var self2 = this;
 		var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 		var testCount = 0;
 		
-		console.log(eventList);
+		
 		console.log(modelData.title.getDay());
 		modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 		console.log(modelData.title);
