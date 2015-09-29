@@ -20,7 +20,7 @@ function octopus() {
 	var selfOctopus = this;
 	console.log("octopus");
 	console.log(eventList);
-	selfOctopus.init();
+	init();
 	 
 	 var init = function(){
 		var self2 = this;
