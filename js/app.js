@@ -4,6 +4,7 @@
 var modelData = {
   //title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
 	title: new Date(),
+	pageTitle: ko.observable(),
 	daysOfWeek: [
 		"Sunday", 
 		"Monday", 
@@ -56,7 +57,7 @@ var viewModel = function() {
 
   
 	// The following are the initialization of oberservables for the knockoutjs methodology
-	pageTitle: ko.observable(modelData.daysOfWeek[modelData.title.getDay()]);  // observable for the title in the header
+	modelData.pageTitle(ko.observable(modelData.daysOfWeek[modelData.title.getDay()]));  // observable for the title in the header
 
 	console.log(eventList);
 
@@ -70,7 +71,7 @@ var timer = function() {
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
-		viewModel.pageTitle("test" + octopus.testCount++);
+		modelData.pageTitle("test" + octopus.testCount++);
 		modelData.count = 10;
 		return;
 	}
