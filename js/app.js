@@ -32,7 +32,7 @@ var octopus = {
 		modelData.title = modelData.daysOfWeek[modelData.title.getDay()];
 		console.log(modelData.title);
 		
-		calendarList();
+		
 		
 		self.changeLook = function(){
 			console.log(eventList);
@@ -81,7 +81,7 @@ var viewModel = function() {
 	modelData.pageTitle(modelData.daysOfWeek[modelData.title.getDay()]);  // observable for the title in the header
 
 	console.log(eventList);
-
+	octopus.calendarList();
 
 
 };
