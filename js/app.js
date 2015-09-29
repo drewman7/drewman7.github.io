@@ -47,7 +47,7 @@ var octopus = {
 		//view.certificationsDisplay();
 		//calls the bio.display2 function to display the map and footer
 		//view.bioDisplay2();
-	 };
+	 }
 };
 
 var viewModel = function() {
