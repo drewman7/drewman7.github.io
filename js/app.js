@@ -14,7 +14,8 @@ var modelData = {
 		"Friday", 
 		"Saturday"
 		],
-	count: 10
+	count: 10,
+	testCount: 0
 };
 
 var octopus = {
@@ -22,7 +23,7 @@ var octopus = {
 	 init: function(){
 		var self2 = this;
 		var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
-		var testCount = 0;
+		//var testCount = 0;
 		
 		console.log("octopus");
 		console.log(eventList);
@@ -71,7 +72,7 @@ var timer = function() {
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
-		modelData.pageTitle("test" + octopus.init.testCount++);
+		modelData.pageTitle("test " + modelData.testCount++);
 		modelData.count = 10;
 		return;
 	}
