@@ -72,9 +72,15 @@ var octopus = {
 				var whenMin = "";
               } else {
 				var whenHour = when.slice(11, 13);
-				var whenMin = when.slice(14, 17);
+				var whenMin = when.slice(14, 16);
 				if (whenHour < 12) {
 					whenMin = whenMin + "AM";
+					if (whenHour < 10) {
+						whenHour = whenHour.slice(1);
+					}
+					if (whenHour === 0) {
+						whenHour = "12";
+					}
 				} else {
 					if (whenHour !== 12) {
 						whenHour = whenHour - 12;
