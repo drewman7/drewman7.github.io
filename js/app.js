@@ -65,8 +65,8 @@ var octopus = {
                 when = event.start.date;
               }
               var whenYear = when.slice(0,4);
-			  var whenMonth = when.slice(6,7);
-			  var whenDay = when.slice(9,10);
+			  var whenMonth = when.slice(5,7);
+			  var whenDay = when.slice(8,10);
 			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + when + ')')
             }
           } else {
