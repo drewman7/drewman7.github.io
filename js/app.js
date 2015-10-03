@@ -67,7 +67,12 @@ var octopus = {
               var whenYear = when.slice(0,4);
 			  var whenMonth = when.slice(5,7);
 			  var whenDay = when.slice(8,10);
-			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + when + ')')
+			  if (!event.start.dateTime) {
+                whenTime = "All Day";
+              } else {
+				whenTime = when.slice(11, 17);
+			  }
+			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenTime + "   "+ when + ')')
             }
           } else {
             appendPre('No upcoming events found.');
