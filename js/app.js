@@ -64,7 +64,10 @@ var octopus = {
               if (!when) {
                 when = event.start.date;
               }
-              appendPre(event.summary + ' (' + when + ')')
+              var whenYear = when.slice(0,3);
+			  var whenMonth = when.slice(5,6);
+			  var whenDay = when.slice(8,9);
+			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + ')')
             }
           } else {
             appendPre('No upcoming events found.');
