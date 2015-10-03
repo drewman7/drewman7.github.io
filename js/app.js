@@ -68,11 +68,21 @@ var octopus = {
 			  var whenMonth = when.slice(5,7);
 			  var whenDay = when.slice(8,10);
 			  if (!event.start.dateTime) {
-                whenTime = "All Day";
+                var whenHour = "All Day";
+				var whenMin = "";
               } else {
-				whenTime = when.slice(11, 17);
+				var whenHour = when.slice(11, 13);
+				var whenMin = when.slice(14, 17);
+				if (whenHour < 12) {
+					whenMin = whenMin + "AM";
+				} else {
+					if (whenHour !== 12) {
+						whenHour = whenHour - 12;
+					}
+					whenMin = whenMin + "PM";
+				}
 			  }
-			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenTime + "   "+ when + ')')
+			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenHour + ":" + whenMin + "   "+ when + ')')
             }
           } else {
             appendPre('No upcoming events found.');
