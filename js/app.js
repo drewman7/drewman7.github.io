@@ -141,7 +141,7 @@ var timer = function() {
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
-		modelData.pageTitle("test " + modelData.testCount++);
+		//modelData.pageTitle("test " + modelData.testCount++);
 		modelData.count = 10;
 		return;
 	}
