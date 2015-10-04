@@ -28,7 +28,7 @@ var modelData = {
 		"November",
 		"December"
 		],
-	count: 10,
+	count: 60,
 	testCount: 0,
 	counterText: ko.observable()
 };
@@ -49,24 +49,7 @@ var octopus = {
 		
 		octopus.calendarList();
 		
-		self.changeLook = function(){
-			console.log(eventList);
-		};
-		
-		//console.log(events);
-		//checkAuth();
-		//Calls the function to display the header section and bio information
-		//view.bioDisplay();
-		//calls the work experience function to display the work experience information
-		//view.workDisplay();
-		//calls the projects function to display the projects information
-		//view.projectsDisplay();
-		//calls the education function to display the education information
-		//view.educationDisplay();
-		//calls the certification function to display the certification information
-		//view.certificationsDisplay();
-		//calls the bio.display2 function to display the map and footer
-		//view.bioDisplay2();
+
 	 },
 	 
 	 calendarList: function(){
@@ -118,6 +101,14 @@ var octopus = {
           } else {
             appendPre('No upcoming events found.');
           }
+	 }
+	 
+	 changeColor: function(){
+		 
+		 if (modelData.title.getHours() < 8 || modelData.title.getHours() > 9){
+			 
+		 }
+		 
 	 }
 };
 
