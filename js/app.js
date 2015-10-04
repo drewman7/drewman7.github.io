@@ -144,6 +144,7 @@ var timer = function() {
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
 		//modelData.pageTitle("test " + modelData.testCount++);
+		window.location.reload();
 		modelData.count = 10;
 		return;
 	}
