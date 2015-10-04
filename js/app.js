@@ -29,7 +29,8 @@ var modelData = {
 		"December"
 		],
 	count: 10,
-	testCount: 0
+	testCount: 0,
+	counterText: ko.observable()
 };
 
 var octopus = {
@@ -138,6 +139,7 @@ var viewModel = function() {
 var timer = function() {
 	modelData.count=modelData.count-1;
 	console.log(modelData.count);
+	modelData.counterText("Reload in " + modelData.count + " secs");
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
