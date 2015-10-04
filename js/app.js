@@ -105,7 +105,7 @@ var octopus = {
 					whenHour = whenHour+ ":";
 				}
 			  }
-			  appendPre(event.summary + '       (' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + ", " + whenYear + "  " + whenHour + whenMin + ')')
+			  appendPre(event.summary + '       (' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()-1] + " " + whenDay + ", " + whenYear + " -- " + whenHour + whenMin + ')')
             }
           } else {
             appendPre('No upcoming events found.');

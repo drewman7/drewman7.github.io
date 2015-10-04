@@ -275,3 +275,7 @@ Wide styles
     text-align: left;
     background-color: #eee;
 }
+
+.events {
+	font-size: 2em;
+}
