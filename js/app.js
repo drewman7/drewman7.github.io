@@ -67,6 +67,7 @@ var octopus = {
               var whenYear = when.slice(0,4);
 			  var whenMonth = when.slice(5,7);
 			  var whenDay = when.slice(8,10);
+			  var eventDate = new date(whenYear, whenMonth, whenDay);
 			  if (!event.start.dateTime) {
                 var whenHour = "All Day";
 				var whenMin = "";
@@ -90,7 +91,7 @@ var octopus = {
 					whenHour = whenHour+ ":";
 				}
 			  }
-			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenHour + whenMin + "   "+ when + ')')
+			  appendPre(event.summary + ' (' + modelData.daysOfWeek[eventDate.getDay()] + " " + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenHour + whenMin + "   "+ when + ')')
             }
           } else {
             appendPre('No upcoming events found.');
