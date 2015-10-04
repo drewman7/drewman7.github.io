@@ -67,7 +67,7 @@ var octopus = {
               var whenYear = when.slice(0,4);
 			  var whenMonth = when.slice(5,7);
 			  var whenDay = when.slice(8,10);
-			  var eventDate = new date(whenYear, whenMonth, whenDay);
+			  var eventDate = new Date(whenYear, whenMonth, whenDay);
 			  if (!event.start.dateTime) {
                 var whenHour = "All Day";
 				var whenMin = "";
