@@ -105,7 +105,14 @@ var octopus = {
 					whenHour = whenHour+ ":";
 				}
 			  }
-			  appendPre(event.summary + '       (' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()-1] + " " + whenDay + ", " + whenYear + " -- " + whenHour + whenMin + ')')
+			  var eventSummary = event.summary;
+			  if (event.summary.length > 20) {
+				  eventSummary = eventSummary.slice(0, 18) + "...";
+			  }
+			  while(eventSummary.length < 21) {
+				  eventSummary = eventSummary + " ";
+			  }
+			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()-1] + " " + whenDay + " -- " + whenHour + whenMin + ')')
             }
           } else {
             appendPre('No upcoming events found.');
