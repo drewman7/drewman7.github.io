@@ -75,20 +75,22 @@ var octopus = {
 				var whenMin = when.slice(14, 16);
 				if (whenHour < 12) {
 					whenMin = whenMin + "AM";
+					if (whenHour === "00") {
+						whenHour = "12";
+					}
 					if (whenHour < 10) {
 						whenHour = whenHour.slice(1);
 					}
-					if (whenHour === 0) {
-						whenHour = "12";
-					}
+					whenHour = whenHour+ ":";
 				} else {
 					if (whenHour !== 12) {
 						whenHour = whenHour - 12;
 					}
 					whenMin = whenMin + "PM";
+					whenHour = whenHour+ ":";
 				}
 			  }
-			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenHour + ":" + whenMin + "   "+ when + ')')
+			  appendPre(event.summary + ' (' + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenHour + whenMin + "   "+ when + ')')
             }
           } else {
             appendPre('No upcoming events found.');
