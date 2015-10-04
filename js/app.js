@@ -14,6 +14,20 @@ var modelData = {
 		"Friday", 
 		"Saturday"
 		],
+	daysOfMonth: [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December"
+		],
 	count: 10,
 	testCount: 0
 };
@@ -91,7 +105,7 @@ var octopus = {
 					whenHour = whenHour+ ":";
 				}
 			  }
-			  appendPre(event.summary + '       (' + modelData.daysOfWeek[eventDate.getDay()] + " " + whenMonth + "/" + whenDay + "/" + whenYear + "  " + whenHour + whenMin + ')')
+			  appendPre(event.summary + '       (' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + ", " + whenYear + "  " + whenHour + whenMin + ')')
             }
           } else {
             appendPre('No upcoming events found.');
