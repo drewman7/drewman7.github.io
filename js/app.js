@@ -101,7 +101,7 @@ var octopus = {
           } else {
             appendPre('No upcoming events found.');
           }
-	 }
+	 },
 	 
 	 changeColor: function(){
 		 
