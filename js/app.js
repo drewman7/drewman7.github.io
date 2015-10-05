@@ -65,6 +65,7 @@ var octopus = {
               var whenYear = when.slice(0,4);
 			  var whenMonth = when.slice(5,7);
 			  var whenDay = when.slice(8,10);
+			  console.log(whenYear + " " + whenMonth + " " + whenDay)
 			  var eventDate = new Date(whenYear, whenMonth, whenDay);
 			  if (!event.start.dateTime) {
                 var whenHour = "All Day";
@@ -99,7 +100,7 @@ var octopus = {
 			  console.log(eventDate);
 			  console.log(eventDate.getDay())
 			  console.log(when);
-			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()-1] + " " + whenDay + " -- " + whenHour + whenMin + ')')
+			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
             }
           } else {
             appendPre('No upcoming events found.');
