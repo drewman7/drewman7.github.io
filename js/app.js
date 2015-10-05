@@ -96,6 +96,9 @@ var octopus = {
 			  while(eventSummary.length < 21) {
 				  eventSummary = eventSummary + " ";
 			  }
+			  console.log(eventDate);
+			  console.log(eventDate.getDay())
+			  console.log(when);
 			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()-1] + " " + whenDay + " -- " + whenHour + whenMin + ')')
             }
           } else {
