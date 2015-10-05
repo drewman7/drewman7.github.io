@@ -86,7 +86,10 @@ Layout styles
     margin: 0 auto;
 }
 
-.header-heading { margin: 0; }
+.header-heading { 
+	margin: 0; 
+	font-size: 50px;
+}
 
 .nav-bar
 {
@@ -286,4 +289,8 @@ Wide styles
 .night {
 	background-color: #fff;
 	color: gray;
+}
+
+.headerTweaks {
+	font-size: 50px;
 }
