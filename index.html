@@ -30,13 +30,13 @@
 
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="theBody">
       <!-- header container -->
       <div class="row-fluid">
         <div id="title" class="span12">
           <div class="header">
             <!-- page title header -->
-            <h1  data-bind="text: modelData.pageTitle" class="header-heading"></h1>
+            <h1  data-bind="text: modelData.pageTitle" class="header-heading night"></h1>
           </div>
         </div>
       </div>
@@ -48,9 +48,9 @@
           Authorize
         </button>
       </div>
-      <h4><pre class="events" id="output"></pre></h4>
+      <h4><pre class="events night" id="output"></pre></h4>
 	  <br>
-	  <div class="counter">
+	  <div class="counter" class="night">
 			<h5 data-bind="text: modelData.counterText"></h5>
 	  </div>
     </div>
