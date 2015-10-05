@@ -90,10 +90,10 @@ var octopus = {
 				}
 			  }
 			  var eventSummary = event.summary;
-			  if (event.summary.length > 20) {
-				  eventSummary = eventSummary.slice(0, 18) + "...";
+			  if (event.summary.length > 25) {
+				  eventSummary = eventSummary.slice(0, 23) + "...";
 			  }
-			  while(eventSummary.length < 21) {
+			  while(eventSummary.length < 26) {
 				  eventSummary = eventSummary + " ";
 			  }
 			  console.log(eventDate);
@@ -132,7 +132,7 @@ var viewModel = function() {
 
 var timer = function() {
 	modelData.count=modelData.count-1;
-	console.log(modelData.count);
+	//console.log(modelData.count);
 	modelData.counterText("Reload in " + modelData.count + " secs");
 	if (modelData.count <= 0){
 		//clearInterval(counter);
