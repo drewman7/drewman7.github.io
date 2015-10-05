@@ -65,8 +65,8 @@ var octopus = {
               var whenYear = when.slice(0,4);
 			  var whenMonth = when.slice(5,7);
 			  var whenDay = when.slice(8,10);
-			  console.log(whenYear + " " + whenMonth + " " + whenDay)
-			  var eventDate = new Date(whenYear, whenMonth, whenDay);
+			  //console.log(whenYear + " " + whenMonth + " " + whenDay)
+			  var eventDate = new Date(whenYear, whenMonth - 1, whenDay);
 			  if (!event.start.dateTime) {
                 var whenHour = "All Day";
 				var whenMin = "";
@@ -97,9 +97,9 @@ var octopus = {
 			  while(eventSummary.length < 26) {
 				  eventSummary = eventSummary + " ";
 			  }
-			  console.log(eventDate);
-			  console.log(eventDate.getDay())
-			  console.log(when);
+			  //console.log(eventDate);
+			  //console.log(eventDate.getDay())
+			  //console.log(when);
 			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
             }
           } else {
