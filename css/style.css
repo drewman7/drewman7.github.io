@@ -80,8 +80,8 @@ Layout styles
 .header
 {
     text-align: left;
-    color: #fff;
-    background: #999;
+    color: lightgray;
+    background: black;
     padding: 0.5em 0.75em;
     margin: 0 auto;
 }
@@ -279,6 +279,8 @@ Wide styles
 	font-size: 1.5em;
 	line-height: normal;
 	font-weight: bolder;
+	background-color: #fff;
+	color: lightgray;
 }
 
 .night {
