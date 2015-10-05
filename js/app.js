@@ -28,7 +28,7 @@ var modelData = {
 		"November",
 		"December"
 		],
-	count: 60,
+	count: 300,
 	testCount: 0,
 	counterText: ko.observable()
 };
