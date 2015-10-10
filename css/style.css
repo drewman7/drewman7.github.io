@@ -306,4 +306,17 @@ Wide styles
 
 .blockCorrect {
 	float: left;
+	margin-right: 20;
+}
+
+.blockLeft {
+	float: left;
+	margin-right: 20;
+	width: 40%;
+}
+
+.blockRight {
+	float: left;
+	margin-right: 20;
+	width: 60%;
 }
