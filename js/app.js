@@ -135,7 +135,7 @@ var viewModel = function() {
   
 	// The following are the initialization of oberservables for the knockoutjs methodology
 	//modelData.pageTitle("Today is " + modelData.daysOfWeek[modelData.title.getDay()] + ", " + modelData.daysOfMonth[modelData.title.getMonth()] + " " + modelData.title.getDate());  // observable for the title in the header
-	modelData.pageTitle(modelData.daysOfWeek[modelData.title.getDay()] + ", " + modelData.daysOfMonth[modelData.title.getMonth()] + " " + modelData.title.getDate() + "...");  // observable for the title in the header	
+	modelData.pageTitle(modelData.daysOfWeek[modelData.title.getDay()] + ", " + modelData.daysOfMonth[modelData.title.getMonth()] + " " + modelData.title.getDate() + " -- ");  // observable for the title in the header	
 
 	console.log(eventList);
 	console.log("here");
