@@ -54,8 +54,8 @@ var octopus = {
 	 
 	 calendarList: function(){
 		  appendPre('Upcoming events:');
-		  $("#r00").append("<div class='blockAll events'>'Upcoming events:'</div>");
-		  $("#r00").attr("style","display: block");
+		  $("#rtitle").append("<div class='blockAll events'>Upcoming events:</div>");
+		  $("#rtitle").attr("style","display: block");
 		  console.log(eventList.length);
           if (eventList.length > 0) {
             for (i = 0; i < eventList.length; i++) {
@@ -103,7 +103,11 @@ var octopus = {
 			  //console.log(eventDate.getDay())
 			  //console.log(when);
 			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
-            }
+              $("#r0" + i).append("<div class='blockSummary events'>" + eventSummary + "</div>");
+			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
+			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
+			  $("#r0" + i).attr("style","display: block");
+			}
           } else {
             appendPre('No upcoming events found.');
           }
