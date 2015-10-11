@@ -102,7 +102,7 @@ var octopus = {
 			  //console.log(eventDate);
 			  //console.log(eventDate.getDay())
 			  //console.log(when);
-			  appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
+			  //appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
               $("#r0" + i).append("<div class='blockSummary events'>" + eventSummary + "</div>");
 			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
