@@ -53,7 +53,7 @@ var octopus = {
 	 },
 	 
 	 calendarList: function(){
-		  appendPre('Upcoming events:');
+		  //appendPre('Upcoming events:');
 		  $("#rtitle").append("<div class='blockAll events'>Upcoming events:</div>");
 		  $("#rtitle").attr("style","display: block");
 		  console.log(eventList.length);
