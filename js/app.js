@@ -5,6 +5,7 @@ var modelData = {
   //title: 'SOMEDAY',         // Title variable for the entire app; placed in the header
 	title: new Date(),
 	pageTitle: ko.observable(),
+	pageTime: ko.observable(),
 	daysOfWeek: [
 		"Sunday", 
 		"Monday", 
