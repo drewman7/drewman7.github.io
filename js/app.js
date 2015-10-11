@@ -165,7 +165,7 @@ var timer = function() {
 		}
 		modelData.time.ampm = "PM";
 	}
-	modelData.pageTime("   (" + modelData.time.hour + ":" + modelData.time.minute + modelData.time.ampm + ")");
+	modelData.pageTime(modelData.time.hour + ":" + modelData.time.minute + modelData.time.ampm);
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
