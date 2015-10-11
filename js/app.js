@@ -6,6 +6,11 @@ var modelData = {
 	title: new Date(),
 	pageTitle: ko.observable(),
 	pageTime: ko.observable(),
+	time: {
+		hour: 0,
+		minute: 0,
+		ampm: ""
+	},
 	daysOfWeek: [
 		"Sunday", 
 		"Monday", 
@@ -131,7 +136,7 @@ var viewModel = function() {
 	// The following are the initialization of oberservables for the knockoutjs methodology
 	//modelData.pageTitle("Today is " + modelData.daysOfWeek[modelData.title.getDay()] + ", " + modelData.daysOfMonth[modelData.title.getMonth()] + " " + modelData.title.getDate());  // observable for the title in the header
 	modelData.pageTitle(modelData.daysOfWeek[modelData.title.getDay()] + ", " + modelData.daysOfMonth[modelData.title.getMonth()] + " " + modelData.title.getDate());  // observable for the title in the header	
-	modelData.pageTime("   (" + modelData.title.getHours() + ":" + modelData.title.getMinutes() + ")");
+
 	console.log(eventList);
 	console.log("here");
 	//octopus.calendarList();
@@ -143,6 +148,24 @@ var timer = function() {
 	modelData.count=modelData.count-1;
 	//console.log(modelData.count);
 	modelData.counterText("Reload in " + modelData.count + " secs");
+	modelData.title = new Date();
+	modelData.time.hour = modelData.title.getHours();
+	modelData.time.minute = modelData.title.getMinutes();
+	if (modelData.time.hour < 12) {
+		modelData.time.ampm = "AM";
+		if (modelData.time.hour === "00") {
+			modelData.time.hour = "12";
+		}
+		if (modelData.time.hour < 10) {
+			modelData.time.hour = modelData.time.hour.slice(1);
+		}
+	} else {
+		if (modelData.time.hour !== 12) {
+			modelData.time.hour = modelData.time.hour - 12;
+		}
+		modelData.time.ampm = "PM";
+	}
+	modelData.pageTime("   (" + modelData.time.hour + ":" + modelData.time.minute + modelData.time.ampm + ")");
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
