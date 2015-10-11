@@ -331,3 +331,7 @@ Wide styles
 	/* margin: 10px; */
 	width: 100%;
 }
+
+.marginAll {
+	margin-top: 40px;
+}
