@@ -165,6 +165,9 @@ var timer = function() {
 		}
 		modelData.time.ampm = "PM";
 	}
+	if (modelData.time.minute < 10) {
+		modelData.time.minute = "0" + modelData.time.minute;
+	}
 	modelData.pageTime(modelData.time.hour + ":" + modelData.time.minute + modelData.time.ampm);
 	if (modelData.count <= 0){
 		//clearInterval(counter);
