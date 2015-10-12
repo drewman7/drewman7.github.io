@@ -114,7 +114,8 @@ var octopus = {
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
 			  if (i == eventList.length - 1) {
-				$("#r0" + i).append("<br><br>");
+				$("<br><br>").insertAfter("#r0" + i);
+				//$("#r0" + i).append("<br><br>");
 			  }
 			}
           } else {
