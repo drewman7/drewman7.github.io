@@ -175,7 +175,8 @@ var timer = function() {
 			modelData.time.hour = 12;
 		}
 		if (modelData.time.hour < 10) {
-			modelData.time.hour = modelData.time.hour.slice(1);
+			//modelData.time.hour = modelData.time.hour.slice(1);
+			modelData.time.hour = +modelData.time.hour;
 		}
 	} else {
 		if (modelData.time.hour !== 12) {
