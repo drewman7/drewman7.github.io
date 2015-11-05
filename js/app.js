@@ -87,9 +87,9 @@ var octopus = {
 					if (whenHour === 0) {
 						whenHour = 12;
 					}
-					//if (whenHour < 10) {
-					//	whenHour = whenHour.slice(1);
-					//}
+					if (whenHour < 10) {
+						whenHour = whenHour.slice(1);
+					}
 					//whenHour = whenHour + ":";
 					console.log(whenHour);
 				} else {
