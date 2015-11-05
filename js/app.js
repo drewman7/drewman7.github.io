@@ -111,9 +111,9 @@ var octopus = {
 			  //appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
               $("#r0" + i).append("<div class='blockSummary events'>" + eventSummary + "</div>");
 			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
-			  if (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
-				  console.log("true");
-			  }
+			  //if (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
+				//  console.log("true");
+			  //}
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
 			  if (i == eventList.length - 1) {
