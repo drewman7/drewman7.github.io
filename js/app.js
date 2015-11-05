@@ -115,6 +115,8 @@ var octopus = {
 			  modelData.title = new Date();
 			  console.log(modelData.daysOfMonth[eventDate.getMonth()]);
 			  console.log(modelData.daysOfMonth[modelData.title.getMonth()]); 
+			  console.log(whenDay);
+			  console.log(modelData.daysOfMonth[modelData.title.getDate()]); 
 	
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
