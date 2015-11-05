@@ -115,8 +115,8 @@ var octopus = {
 			  modelData.title = new Date();
 			  //console.log(modelData.daysOfMonth[eventDate.getMonth()]);
 			  //console.log(modelData.daysOfMonth[modelData.title.getMonth()]); 
-			  console.log(whenDay);
-			  console.log(modelData.title.getDate() + 1); 
+			  console.log(whenDay + 1);
+			  console.log(modelData.title.getDate() + 2); 
 			  
 	//		  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
 					if (modelData.title.getDate() + 1 === whenDay) {
