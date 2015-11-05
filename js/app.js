@@ -90,14 +90,14 @@ var octopus = {
 					//if (whenHour < 10) {
 					//	whenHour = whenHour.slice(1);
 					//}
-					whenHour = whenHour + ":";
+					//whenHour = whenHour + ":";
 					console.log(whenHour);
 				} else {
 					if (whenHour > 12) {
 						whenHour = whenHour - 12;
 					}
 					whenMin = whenMin + " pm";
-					whenHour = whenHour+ ":";
+					//whenHour = whenHour+ ":";
 				}
 			  }
 			  var eventSummary = event.summary;
@@ -112,7 +112,7 @@ var octopus = {
 			  //console.log(when);
 			  //appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
               $("#r0" + i).append("<div class='blockSummary events'>" + eventSummary + "</div>");
-			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
+			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + ":" + whenMin + "</div>");
 			  
 			  modelData.title = new Date();
 			  //console.log(modelData.daysOfMonth[eventDate.getMonth()]);
