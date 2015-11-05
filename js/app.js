@@ -116,7 +116,7 @@ var octopus = {
 			  console.log(modelData.daysOfMonth[eventDate.getMonth()]);
 			  console.log(modelData.daysOfMonth[modelData.title.getMonth()]); 
 			  console.log(whenDay);
-			  console.log(modelData.daysOfMonth[modelData.title.getDate()]); 
+			  console.log(modelData.title.getDate()); 
 	
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
@@ -180,7 +180,7 @@ var timer = function() {
 	if (modelData.time.minute < 10) {
 		modelData.time.minute = "0" + modelData.time.minute;
 	}
-	modelData.pageTime(modelData.time.hour + ":" + modelData.time.minute + modelData.time.ampm);
+	modelData.pageTime(modelData.time.hour + ":" + modelData.time.minute + " " + modelData.time.ampm);
 	if (modelData.count <= 0){
 		//clearInterval(counter);
 		// console.log(viewModel.pageTitle());
