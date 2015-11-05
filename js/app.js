@@ -83,8 +83,8 @@ var octopus = {
 				var whenMin = when.slice(14, 16);
 				if (whenHour < 12) {
 					whenMin = whenMin + "AM";
-					if (whenHour === "00") {
-						whenHour = "12";
+					if (whenHour === 00) {
+						whenHour = 12;
 					}
 					if (whenHour < 10) {
 						whenHour = whenHour.slice(1);
@@ -111,6 +111,9 @@ var octopus = {
 			  //appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
               $("#r0" + i).append("<div class='blockSummary events'>" + eventSummary + "</div>");
 			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
+			  if (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
+				  console.log("true");
+			  }
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
 			  if (i == eventList.length - 1) {
@@ -158,8 +161,8 @@ var timer = function() {
 	modelData.time.minute = modelData.title.getMinutes();
 	if (modelData.time.hour < 12) {
 		modelData.time.ampm = "AM";
-		if (modelData.time.hour === "00") {
-			modelData.time.hour = "12";
+		if (modelData.time.hour === 00) {
+			modelData.time.hour = 12;
 		}
 		if (modelData.time.hour < 10) {
 			modelData.time.hour = modelData.time.hour.slice(1);
