@@ -84,7 +84,7 @@ var octopus = {
 				console.log(whenHour);
 				if (whenHour < 12) {
 					whenMin = whenMin + " am";
-					if (whenHour = 0) {
+					if (whenHour === 0) {
 						whenHour = 12;
 					}
 					//if (whenHour < 10) {
