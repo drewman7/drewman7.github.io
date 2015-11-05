@@ -111,6 +111,8 @@ var octopus = {
 			  //appendPre(eventSummary + '(' + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + " -- " + whenHour + whenMin + ')')
               $("#r0" + i).append("<div class='blockSummary events'>" + eventSummary + "</div>");
 			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
+			  
+			  modelData.title = new Date();
 			  console.log(modelData.daysOfMonth[eventDate.getMonth()]);
 			  console.log(modelData.daysOfMonth[modelData.title.getMonth()]); 
 	
