@@ -119,7 +119,7 @@ var octopus = {
 			  console.log(modelData.title.getDate() + 2); 
 			  
 	//		  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
-			  if (modelData.daysOfMonth[eventDate.getMonth()] === "November") {
+			  if (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
 				  console.log("the month is now!");
 			  }
 					
