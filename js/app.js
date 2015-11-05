@@ -121,14 +121,18 @@ var octopus = {
 	//		  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
 			  if (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
 				  console.log("the month is now!");
-			  }
-					
+					if (modelData.title.getDate() === +whenDay) {
+						$("#r0" + i).append("<div class='blockDate events'>" + "**Today!**" + "</div>");
+					}					
 					if (modelData.title.getDate() + 1 === +whenDay) {
-						console.log("Tomorrow");
+						$("#r0" + i).append("<div class='blockDate events'>" + "Tomorrow" + "</div>");
 					}
-	//		  }
-	
-			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
+					if (modelData.title.getDate() !== +whenDay && modelData.title.getDate() + 1 !== +whenDay) {
+						$("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
+					}
+ 			  } else {	
+				$("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
+			  }
 			  $("#r0" + i).attr("style","display: inline");
 			  if (i == eventList.length - 1) {
 				$("<br><br>").insertAfter("#r0" + i);
