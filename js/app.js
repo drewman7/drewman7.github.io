@@ -119,6 +119,10 @@ var octopus = {
 			  console.log(modelData.title.getDate() + 2); 
 			  
 	//		  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
+			  if (modelData.daysOfMonth[eventDate.getMonth()] === "November") {
+				  console.log("the month is now!");
+			  }
+					
 					if (modelData.title.getDate() + 1 === +whenDay) {
 						console.log("Tomorrow");
 					}
@@ -170,7 +174,7 @@ var timer = function() {
 	modelData.time.hour = modelData.title.getHours();
 	modelData.time.minute = modelData.title.getMinutes();
 	if (modelData.time.hour < 12) {
-		modelData.time.ampm = "am";
+		modelData.time.ampm = " am";
 		if (modelData.time.hour === 00) {
 			modelData.time.hour = 12;
 		}
@@ -182,7 +186,7 @@ var timer = function() {
 		if (modelData.time.hour !== 12) {
 			modelData.time.hour = modelData.time.hour - 12;
 		}
-		modelData.time.ampm = "pm";
+		modelData.time.ampm = " pm";
 	}
 	if (modelData.time.minute < 10) {
 		modelData.time.minute = "0" + modelData.time.minute;
