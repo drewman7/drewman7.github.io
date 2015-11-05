@@ -82,7 +82,7 @@ var octopus = {
 				var whenHour = when.slice(11, 13);
 				var whenMin = when.slice(14, 16);
 				if (whenHour < 12) {
-					whenMin = whenMin + "AM";
+					whenMin = whenMin + "am";
 					if (whenHour === 00) {
 						whenHour = 12;
 					}
@@ -94,7 +94,7 @@ var octopus = {
 					if (whenHour !== 12) {
 						whenHour = whenHour - 12;
 					}
-					whenMin = whenMin + "PM";
+					whenMin = whenMin + "pm";
 					whenHour = whenHour+ ":";
 				}
 			  }
@@ -113,10 +113,16 @@ var octopus = {
 			  $("#r0" + i).append("<div class='blockTime events'>" + whenHour + whenMin + "</div>");
 			  
 			  modelData.title = new Date();
-			  console.log(modelData.daysOfMonth[eventDate.getMonth()]);
-			  console.log(modelData.daysOfMonth[modelData.title.getMonth()]); 
-			  console.log(whenDay);
-			  console.log(modelData.title.getDate()); 
+			  //console.log(modelData.daysOfMonth[eventDate.getMonth()]);
+			  //console.log(modelData.daysOfMonth[modelData.title.getMonth()]); 
+			  //console.log(whenDay);
+			  //console.log(modelData.title.getDate()); 
+			  
+			  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
+					if (modelData.title.getDate()+1 === whenDay) {
+						console.log("Tomorrow");
+					}
+			  }
 	
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
@@ -164,7 +170,7 @@ var timer = function() {
 	modelData.time.hour = modelData.title.getHours();
 	modelData.time.minute = modelData.title.getMinutes();
 	if (modelData.time.hour < 12) {
-		modelData.time.ampm = "AM";
+		modelData.time.ampm = "am";
 		if (modelData.time.hour === 00) {
 			modelData.time.hour = 12;
 		}
@@ -175,7 +181,7 @@ var timer = function() {
 		if (modelData.time.hour !== 12) {
 			modelData.time.hour = modelData.time.hour - 12;
 		}
-		modelData.time.ampm = "PM";
+		modelData.time.ampm = "pm";
 	}
 	if (modelData.time.minute < 10) {
 		modelData.time.minute = "0" + modelData.time.minute;
