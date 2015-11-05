@@ -118,11 +118,11 @@ var octopus = {
 			  //console.log(whenDay);
 			  //console.log(modelData.title.getDate()); 
 			  
-			  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
-					if (modelData.title.getDate()+1 === whenDay) {
+	//		  If (modelData.daysOfMonth[eventDate.getMonth()] === modelData.daysOfMonth[modelData.title.getMonth()]) {
+					if (modelData.title.getDate() + 1 === whenDay) {
 						console.log("Tomorrow");
 					}
-			  }
+	//		  }
 	
 			  $("#r0" + i).append("<div class='blockDate events'>" + modelData.daysOfWeek[eventDate.getDay()] + ", " + modelData.daysOfMonth[eventDate.getMonth()] + " " + whenDay + "</div>");
 			  $("#r0" + i).attr("style","display: inline");
