@@ -101,10 +101,10 @@ var octopus = {
 				}
 			  }
 			  var eventSummary = event.summary;
-			  if (event.summary.length > 25) {
-				  eventSummary = eventSummary.slice(0, 23) + "...";
+			  if (event.summary.length > 31) {
+				  eventSummary = eventSummary.slice(0, 29) + "...";
 			  }
-			  while(eventSummary.length < 26) {
+			  while(eventSummary.length < 32) {
 				  eventSummary = eventSummary + " ";
 			  }
 			  //console.log(eventDate);
